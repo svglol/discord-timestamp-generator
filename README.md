@@ -1,10 +1,7 @@
-# Nuxt 3 Template
+# Discord Timestamp Generator
 
-A simple Nuxt 3 template with a few additions
+A simple website to generate discord timestamps
 
-- Eslint & Prettier config
-- Stylelint
-- Commitlint
-- Nuxt-vitest
-- Renovate config
-- Github workflow tests
+Made with Nuxt3
+
+https://discord-timestamp-generator-eta.vercel.app/
