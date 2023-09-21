@@ -47,10 +47,10 @@ devDependencies:
     specifier: 6.7.2
     version: 6.7.2(eslint@8.49.0)(typescript@5.2.2)
   '@vueuse/core':
-    specifier: ^10.4.1
+    specifier: 10.4.1
     version: 10.4.1(vue@3.3.4)
   '@vueuse/nuxt':
-    specifier: ^10.4.1
+    specifier: 10.4.1
     version: 10.4.1(nuxt@3.7.3)(vue@3.3.4)
   eslint:
     specifier: 8.49.0
