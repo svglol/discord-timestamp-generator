@@ -8,7 +8,7 @@
       <UInput v-model="dateTime" type="datetime-local" />
     </UFormGroup>
     <UFormGroup label="Timezone" name="timezone">
-      <USelectMenu v-model="timezone" :options="timezones" />
+      <USelect v-model="timezone" :options="timezones" />
     </UFormGroup>
     <UFormGroup label="Format" name="format">
       <USelect v-model="format" :options="formats" option-attribute="name" />
