@@ -1,0 +1,57 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare && pnpm simple-git-hooks install && npx playwright install",
+    "lint": "pnpm lint:js && pnpm lint:style",
+    "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --fix --ignore-path .gitignore",
+    "preview": "nuxt preview",
+    "test": "vitest --run",
+    "typecheck": "nuxt typecheck"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit $1"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,vue}": [
+      "eslint --fix"
+    ],
+    "*.{css,vue}": "stylelint --fix"
+  },
+  "dependencies": {
+    "nuxt": "3.7.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
+    "@nuxt/devtools": "0.8.4",
+    "@nuxt/eslint-config": "0.2.0",
+    "@nuxt/test-utils": "3.7.3",
+    "@types/node": "18.17.18",
+    "@typescript-eslint/eslint-plugin": "6.7.2",
+    "@typescript-eslint/parser": "6.7.2",
+    "eslint": "8.49.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-vue": "9.17.0",
+    "happy-dom": "10.5.2",
+    "lint-staged": "14.0.1",
+    "nuxt-vitest": "0.10.5",
+    "@playwright/test": "1.38.0",
+    "postcss-html": "1.5.0",
+    "prettier": "3.0.3",
+    "simple-git-hooks": "2.9.0",
+    "stylelint": "15.10.3",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-recommended-vue": "1.5.0",
+    "stylelint-config-standard": "34.0.0",
+    "vitest": "0.33.0"
+  },
+  "packageManager": "pnpm@8.7.6"
+}
