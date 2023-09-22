@@ -24,6 +24,7 @@
     "*.{css,vue}": "stylelint --fix"
   },
   "dependencies": {
+    "@iconify-json/mdi": "^1.1.54",
     "@nuxt/ui": "^2.8.1",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.43",

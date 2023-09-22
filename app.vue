@@ -38,6 +38,7 @@
       </div>
     </UFormGroup>
     <UNotifications />
+    <TheFooter />
   </UContainer>
 </template>
 

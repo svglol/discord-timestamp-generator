@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   modules: ['nuxt-vitest', '@nuxt/devtools', '@nuxt/ui', '@vueuse/nuxt'],
   devtools: { enabled: true },
   ssr: false,
+  ui: {
+    icons: ['mdi', 'heroicons'],
+  },
 })
