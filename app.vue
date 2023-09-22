@@ -47,9 +47,9 @@ const toast = useToast()
 useHead({
   title: 'Discord Timestamp Generator',
 })
-const dateTime = ref('')
-const timezone = ref('')
-const timezones = ref([''])
+const dateTime = ref(convertTimetoLocal(new Date()))
+const timezone = ref(Intl.DateTimeFormat().resolvedOptions().timeZone)
+const timezones = ref(Intl.supportedValuesOf('timeZone'))
 const format = ref('')
 const formats = ref([
   { name: 'Default', value: '' },
@@ -99,12 +99,6 @@ watchEffect(() => {
         break
     }
   }
-})
-
-onMounted(() => {
-  timezone.value = Intl.DateTimeFormat().resolvedOptions().timeZone
-  dateTime.value = convertTimetoLocal(new Date())
-  timezones.value = Intl.supportedValuesOf('timeZone')
 })
 
 function convertTimetoLocal(value: Date | null) {
