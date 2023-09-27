@@ -5,13 +5,14 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "postinstall": "nuxt prepare && bun simple-git-hooks install && bunx playwright install && bunx playwright install-deps",
+    "postinstall": "nuxt prepare && bun simple-git-hooks install",
     "lint": "bun lint:js && bun lint:style",
     "lint:js": "eslint --ext .js,.ts,.mjs,.vue --fix --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --fix --ignore-path .gitignore",
     "preview": "nuxt preview",
     "test": "vitest --run",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "playwright-install": "bunx playwright install && bunx playwright install-deps"
   },
   "simple-git-hooks": {
     "pre-commit": "bun lint-staged",
