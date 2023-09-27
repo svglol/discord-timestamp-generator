@@ -20,19 +20,20 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Lint
-        run: pnpm lint
+        run: bun lint
 
   test:
     name: Test
@@ -43,22 +44,23 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v2.4.0
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Build
-        run: pnpm build
+        run: bun run build
 
       - name: Test
-        run: pnpm test
+        run: bun run test
 
       - name: Typecheck
-        run: pnpm typecheck
+        run: bun typecheck
