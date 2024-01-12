@@ -28,7 +28,7 @@
     "@iconify-json/mdi": "1.1.64",
     "@nuxt/ui": "2.9.0",
     "moment": "2.29.4",
-    "moment-timezone": "0.5.43",
+    "moment-timezone": "0.5.44",
     "nuxt": "3.8.0",
     "@commitlint/cli": "18.0.0",
     "@commitlint/config-conventional": "18.0.0",
