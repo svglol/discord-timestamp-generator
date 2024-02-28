@@ -49,7 +49,7 @@
     "happy-dom": "12.2.1",
     "lint-staged": "15.2.2",
     "nuxt-vitest": "0.11.5",
-    "postcss-html": "1.5.0",
+    "postcss-html": "1.6.0",
     "prettier": "3.2.5",
     "simple-git-hooks": "2.9.0",
     "stylelint": "15.11.0",
