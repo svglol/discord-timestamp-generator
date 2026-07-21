@@ -18,16 +18,16 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: oven-sh/setup-bun@v1.2.2
         with:
           bun-version: latest
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
-          node-version: 18
+          node-version: 18.20.8
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
@@ -42,16 +42,16 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.4.0
 
-      - uses: oven-sh/setup-bun@v1
+      - uses: oven-sh/setup-bun@v1.2.2
         with:
           bun-version: latest
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.4.0
         with:
-          node-version: 18
+          node-version: 18.20.8
 
       - name: Install dependencies
         run: bun install --frozen-lockfile
